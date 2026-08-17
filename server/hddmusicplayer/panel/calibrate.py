@@ -188,7 +188,7 @@ def main() -> int:
 
     print(f"\nKaydedildi: {path}")
     print(json.dumps(calibration, indent=2))
-    print("\nPaneli yeniden başlat:  sudo systemctl restart zikplayer-panel")
+    print("\nPaneli yeniden başlat:  sudo systemctl restart hddmusicplayer-panel")
     return 0
 
 

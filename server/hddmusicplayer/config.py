@@ -1,6 +1,6 @@
-"""Yapılandırma. Her ayar ZIK_* ortam değişkeniyle ezilebilir.
+"""Yapılandırma. Her ayar HDDMUSICPLAYER_* ortam değişkeniyle ezilebilir.
 
-Servisler /etc/zikplayer/zikplayer.env dosyasını okur (systemd EnvironmentFile).
+Servisler /etc/hddmusicplayer/hddmusicplayer.env dosyasını okur (systemd EnvironmentFile).
 """
 
 from __future__ import annotations
@@ -10,7 +10,7 @@ from pathlib import Path
 
 
 def _str(name: str, default: str) -> str:
-    return os.environ.get(f"ZIK_{name}", default).strip()
+    return os.environ.get(f"HDDMUSICPLAYER_{name}", default).strip()
 
 
 def _int(name: str, default: int) -> int:
@@ -34,7 +34,7 @@ def _path(name: str, default: str) -> Path:
 #: veritabanındaki yollar bu köke göreli tutulur ve doğrudan MPD'ye verilir.
 MUSIC_ROOT = _path("MUSIC_ROOT", "/media/music")
 
-DATA_DIR = _path("DATA_DIR", "/var/lib/zikplayer")
+DATA_DIR = _path("DATA_DIR", "/var/lib/hddmusicplayer")
 DB_PATH = DATA_DIR / "library.db"
 ART_DIR = DATA_DIR / "art"
 

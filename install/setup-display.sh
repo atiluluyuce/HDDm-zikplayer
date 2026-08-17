@@ -23,7 +23,7 @@ fi
 [[ -f "$CONFIG" ]] || { warn "config.txt bulunamadı"; exit 1; }
 log "Yapılandırma dosyası: $CONFIG"
 
-cp -n "$CONFIG" "$CONFIG.zikplayer-bak" 2>/dev/null || true
+cp -n "$CONFIG" "$CONFIG.hddmusicplayer-bak" 2>/dev/null || true
 
 # rotate=90 -> 320x480 panel 480x320 yatay hâle gelir.
 if [[ -f "$OVERLAY_DIR/waveshare35a.dtbo" ]]; then
@@ -50,7 +50,7 @@ add_line() {
   fi
 }
 
-grep -q '# --- zikplayer ---' "$CONFIG" || printf '\n# --- zikplayer ---\n' >> "$CONFIG"
+grep -q '# --- hddmusicplayer ---' "$CONFIG" || printf '\n# --- hddmusicplayer ---\n' >> "$CONFIG"
 add_line 'dtparam=spi=on'
 add_line "$OVERLAY"
 
@@ -65,7 +65,7 @@ BLANK=/etc/systemd/system/disable-console-blank.service
 if [[ ! -f "$BLANK" ]]; then
   cat > "$BLANK" <<'UNIT'
 [Unit]
-Description=Konsol ekran koruyucusunu kapat (zikplayer paneli için)
+Description=Konsol ekran koruyucusunu kapat (hddmusicplayer paneli için)
 
 [Service]
 Type=oneshot
@@ -97,5 +97,5 @@ Ekran + DAC fiziksel çakışması hatırlatması:
 Sonrasında:
     ls -l /dev/fb1                         # ekran framebuffer'ı görünmeli
     sudo ./install/calibrate-touch.sh      # dokunmatiği kalibre et
-    sudo systemctl start zikplayer-panel
+    sudo systemctl start hddmusicplayer-panel
 EOF

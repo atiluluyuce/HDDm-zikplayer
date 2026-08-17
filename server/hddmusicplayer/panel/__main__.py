@@ -1,4 +1,4 @@
-"""Giriş noktası: python3 -m zikplayer.panel"""
+"""Giriş noktası: python3 -m hddmusicplayer.panel"""
 
 from .app import main
 

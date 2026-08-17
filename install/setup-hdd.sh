@@ -49,7 +49,7 @@ case "$FSTYPE" in
       DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends ntfs-3g
     fi
     FSTYPE=ntfs-3g
-    # uid/gid: mpd ve zikplayer okuyabilsin. big_writes kopyalamayı hızlandırır.
+    # uid/gid: mpd ve hddmusicplayer okuyabilsin. big_writes kopyalamayı hızlandırır.
     OPTIONS="defaults,noatime,nofail,x-systemd.device-timeout=15,uid=0,gid=audio,umask=0022,big_writes"
     ;;
   exfat)
@@ -77,7 +77,7 @@ esac
 # --- fstab -------------------------------------------------------------------
 
 mkdir -p "$MOUNT_POINT"
-cp -n /etc/fstab /etc/fstab.zikplayer-bak 2>/dev/null || true
+cp -n /etc/fstab /etc/fstab.hddmusicplayer-bak 2>/dev/null || true
 
 if grep -q "UUID=$UUID" /etc/fstab; then
   log "fstab kaydı zaten var, güncelleniyor"
@@ -101,13 +101,13 @@ log "İlk bakışta $COUNT ses dosyası görünüyor (en fazla 20000'e kadar say
 
 if [[ "$MOUNT_POINT" != "/media/music" ]]; then
   warn "Bağlama noktası varsayılandan farklı."
-  warn "/etc/zikplayer/zikplayer.env içindeki ZIK_MUSIC_ROOT ve"
+  warn "/etc/hddmusicplayer/hddmusicplayer.env içindeki HDDMUSICPLAYER_MUSIC_ROOT ve"
   warn "/etc/mpd.conf içindeki music_directory değerlerini $MOUNT_POINT yap."
 fi
 
 cat <<EOF
 
 Sıradaki:
-    sudo systemctl restart mpd zikplayer-api
+    sudo systemctl restart mpd hddmusicplayer-api
     # ardından web arayüzünün Ayarlar sekmesinden "Tara"ya bas
 EOF

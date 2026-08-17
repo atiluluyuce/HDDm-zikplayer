@@ -1,4 +1,4 @@
-// zikplayer web arayüzü — hash tabanlı basit yönlendirici + görünümler.
+// hddmusicplayer web arayüzü — hash tabanlı basit yönlendirici + görünümler.
 
 import { api, artUrl, watchState } from './api.js';
 

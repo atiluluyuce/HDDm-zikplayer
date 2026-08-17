@@ -16,7 +16,7 @@ Raspberry Pi Imager ile yazarken gelişmiş ayarlardan şunları aç:
 
 ```bash
 sudo apt update && sudo apt full-upgrade -y
-sudo raspi-config nonint do_hostname zikplayer   # ağda zikplayer.local olarak görünsün
+sudo raspi-config nonint do_hostname hddmusicplayer   # ağda hddmusicplayer.local olarak görünsün
 ```
 
 ## 1. Depoyu al ve kur
@@ -33,12 +33,12 @@ Kurulum betiği şunları yapar:
 | Adım | Ayrıntı |
 |---|---|
 | Paketler | `mpd`, `alsa-utils`, `python3-pil`, `python3-numpy`, `python3-mutagen`, `python3-evdev`, `python3-gpiozero`, `python3-lgpio` |
-| Kullanıcı | `zikplayer` sistem kullanıcısı; `audio`, `video`, `input`, `gpio` gruplarında |
-| Sanal ortam | `/opt/zikplayer/venv` — `--system-site-packages` ile, içine sadece `starlette` + `uvicorn` |
-| Yapılandırma | `/etc/zikplayer/zikplayer.env`, `/etc/mpd.conf`, `/etc/asound.conf` |
-| Servisler | `zikplayer-api`, `zikplayer-panel` |
+| Kullanıcı | `hddmusicplayer` sistem kullanıcısı; `audio`, `video`, `input`, `gpio` gruplarında |
+| Sanal ortam | `/opt/hddmusicplayer/venv` — `--system-site-packages` ile, içine sadece `starlette` + `uvicorn` |
+| Yapılandırma | `/etc/hddmusicplayer/hddmusicplayer.env`, `/etc/mpd.conf`, `/etc/asound.conf` |
+| Servisler | `hddmusicplayer-api`, `hddmusicplayer-panel` |
 
-> Mevcut `/etc/mpd.conf` varsa `/etc/mpd.conf.zikplayer-bak` olarak yedeklenir.
+> Mevcut `/etc/mpd.conf` varsa `/etc/mpd.conf.hddmusicplayer-bak` olarak yedeklenir.
 
 **Bit-perfect çıkış istiyorsan** (ses seviyesini amfiden ayarlayacaksan):
 
@@ -83,7 +83,7 @@ Yeniden başladıktan sonra doğrula:
 aplay -l
 # ... card 0: sndrpihifiberry [snd_rpi_hifiberry_dac], device 0: ...
 
-speaker-test -D zikplayer -c 2 -t sine -l 1
+speaker-test -D hddmusicplayer -c 2 -t sine -l 1
 ```
 
 Ses gelmiyorsa: [Sorun giderme](#sorun-giderme).
@@ -100,7 +100,7 @@ Ardından:
 ```bash
 ls -l /dev/fb1                      # ekranın framebuffer'ı
 sudo ./install/calibrate-touch.sh   # dört hedefe sırayla bas
-sudo systemctl restart zikplayer-panel
+sudo systemctl restart hddmusicplayer-panel
 ```
 
 `waveshare35a.dtbo` Raspberry Pi OS ile gelmez. Betik bulamazsa mainline
@@ -125,20 +125,20 @@ olduğu için bu bölge açıkta kalıyor, ekran takılıyken bile erişilebilir
 KY-040 tarzı bir kart kullanıyorsan `+` ucunu bağlamana gerek yok — Pi'nin
 dahili pull-up dirençleri devreye alınıyor.
 
-Saat yönü sesi kısıyorsa `/etc/zikplayer/zikplayer.env` içinde:
+Saat yönü sesi kısıyorsa `/etc/hddmusicplayer/hddmusicplayer.env` içinde:
 
 ```ini
-ZIK_ENCODER_REVERSED=1
+HDDMUSICPLAYER_ENCODER_REVERSED=1
 ```
 
-Encoder yoksa `ZIK_ENCODER_ENABLED=0` yap; panel dokunmatikle çalışmaya devam eder.
+Encoder yoksa `HDDMUSICPLAYER_ENCODER_ENABLED=0` yap; panel dokunmatikle çalışmaya devam eder.
 
 ## 6. İlk tarama
 
 Servis açılışta taramayı kendiliğinden başlatır. İlerlemeyi izlemek için:
 
 - Web arayüzü → Ayarlar sekmesi
-- veya `journalctl -u zikplayer-api -f`
+- veya `journalctl -u hddmusicplayer-api -f`
 
 500 GB / ~50 bin parçalık bir arşiv USB HDD üzerinden yaklaşık **20-40 dakika**
 sürer. Sonraki taramalar yalnızca değişen dosyalara bakar, saniyeler sürer.
@@ -173,7 +173,7 @@ softvol denetimi PCM ilk kez açılana kadar ALSA'da görünmez. Bir kez sessizl
 çalarak oluştur:
 
 ```bash
-aplay -D zikplayer -f cd -d 1 /dev/zero
+aplay -D hddmusicplayer -f cd -d 1 /dev/zero
 amixer -c sndrpihifiberry sset SoftMaster 70%
 sudo systemctl restart mpd
 ```
@@ -197,7 +197,7 @@ Yine olmuyorsa ham değerleri incele:
 sudo evtest    # dokunmatik aygıtı seç, ekrana bas, ABS_X/ABS_Y değerlerini gör
 ```
 
-`/var/lib/zikplayer/touch-calibration.json` içindeki `swap_xy`, `invert_x`,
+`/var/lib/hddmusicplayer/touch-calibration.json` içindeki `swap_xy`, `invert_x`,
 `invert_y` bayraklarını elle de düzeltebilirsin.
 
 ### Disk bağlanmıyor / kayboluyor
@@ -213,8 +213,8 @@ Rastgele kopmalar neredeyse her zaman besleme kaynaklıdır. Beslemeli hub kulla
 ### Web arayüzü açılmıyor
 
 ```bash
-systemctl status zikplayer-api
-journalctl -u zikplayer-api -n 50 --no-pager
+systemctl status hddmusicplayer-api
+journalctl -u hddmusicplayer-api -n 50 --no-pager
 curl -s localhost:8080/healthz        # "ok" dönmeli
 ```
 
@@ -223,12 +223,12 @@ curl -s localhost:8080/healthz        # "ok" dönmeli
 ### Panel açılmıyor
 
 ```bash
-journalctl -u zikplayer-panel -n 50 --no-pager
+journalctl -u hddmusicplayer-panel -n 50 --no-pager
 ```
 
 - `/dev/fb1` yoksa önce ekran overlay'i.
 - İzin hatası varsa kullanıcı `video`/`input` gruplarında mı:
-  `id zikplayer`
+  `id hddmusicplayer`
 
 ---
 
@@ -237,20 +237,20 @@ journalctl -u zikplayer-panel -n 50 --no-pager
 ```bash
 cd HDDm-zikplayer
 git pull
-sudo systemctl restart zikplayer-api zikplayer-panel
+sudo systemctl restart hddmusicplayer-api hddmusicplayer-panel
 ```
 
 Bağımlılıklar veya servis tanımları değiştiyse `sudo ./install/install.sh`
-tekrar çalıştırılabilir — mevcut `zikplayer.env` dosyasına dokunmaz.
+tekrar çalıştırılabilir — mevcut `hddmusicplayer.env` dosyasına dokunmaz.
 
 ## Kaldırma
 
 ```bash
-sudo systemctl disable --now zikplayer-api zikplayer-panel
-sudo rm /etc/systemd/system/zikplayer-{api,panel}.service
-sudo rm -rf /opt/zikplayer /var/lib/zikplayer /etc/zikplayer /etc/sudoers.d/zikplayer
-sudo mv /etc/mpd.conf.zikplayer-bak /etc/mpd.conf   # yedek varsa
+sudo systemctl disable --now hddmusicplayer-api hddmusicplayer-panel
+sudo rm /etc/systemd/system/hddmusicplayer-{api,panel}.service
+sudo rm -rf /opt/hddmusicplayer /var/lib/hddmusicplayer /etc/hddmusicplayer /etc/sudoers.d/hddmusicplayer
+sudo mv /etc/mpd.conf.hddmusicplayer-bak /etc/mpd.conf   # yedek varsa
 sudo systemctl daemon-reload
 ```
 
-`config.txt` ve `fstab` değişiklikleri için `.zikplayer-bak` yedekleri kullanılabilir.
+`config.txt` ve `fstab` değişiklikleri için `.hddmusicplayer-bak` yedekleri kullanılabilir.

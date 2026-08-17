@@ -86,10 +86,10 @@ Bu, HAP-Z1ES gibi cihazların analog kademeli seviye kontrolünden farklı bir d
 İki seçenek var, ikisi de kurulu geliyor:
 
 - **Sabit çıkış (bit-perfect, önerilen):** DAC hep %100 çalar, sesi amfiden ayarlarsın.
-  Sinyal hiç değiştirilmez. `ZIK_VOLUME_MODE=fixed`
+  Sinyal hiç değiştirilmez. `HDDMUSICPLAYER_VOLUME_MODE=fixed`
 - **Yazılım seviyesi (softvol):** ALSA'nın `softvol` eklentisi araya girer, arayüzden
   ses ayarlanır. Çok kısık seviyelerde teorik olarak bit derinliği kaybı olur; pratikte
-  %50 üstünde duyulur bir fark yoktur. `ZIK_VOLUME_MODE=softvol` (varsayılan)
+  %50 üstünde duyulur bir fark yoktur. `HDDMUSICPLAYER_VOLUME_MODE=softvol` (varsayılan)
 
 ---
 

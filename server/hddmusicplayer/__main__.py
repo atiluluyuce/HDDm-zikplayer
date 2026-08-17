@@ -1,4 +1,4 @@
-"""Giriş noktası: python3 -m zikplayer"""
+"""Giriş noktası: python3 -m hddmusicplayer"""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ from . import config
 
 def main() -> None:
     uvicorn.run(
-        "zikplayer.web:app",
+        "hddmusicplayer.web:app",
         host=config.HTTP_HOST,
         port=config.HTTP_PORT,
         log_level="info",

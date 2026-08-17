@@ -736,7 +736,7 @@ def main() -> None:
                         format="%(asctime)s %(levelname)-7s %(name)s: %(message)s")
     import os
 
-    PanelApp(os.environ.get("ZIK_API_URL", "http://127.0.0.1:8080")).run()
+    PanelApp(os.environ.get("HDDMUSICPLAYER_API_URL", "http://127.0.0.1:8080")).run()
 
 
 if __name__ == "__main__":

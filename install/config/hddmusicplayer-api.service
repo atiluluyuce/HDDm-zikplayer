@@ -1,5 +1,5 @@
 [Unit]
-Description=zikplayer API ve web arayüzü
+Description=hddmusicplayer API ve web arayüzü
 Documentation=https://github.com/atiluluyuce/HDDm-zikplayer
 After=network-online.target mpd.service
 Wants=network-online.target
@@ -10,9 +10,9 @@ Type=simple
 User=@USER@
 Group=@USER@
 WorkingDirectory=@REPO_DIR@/server
-EnvironmentFile=/etc/zikplayer/zikplayer.env
+EnvironmentFile=/etc/hddmusicplayer/hddmusicplayer.env
 Environment=PYTHONUNBUFFERED=1
-ExecStart=@VENV_DIR@/bin/python -m zikplayer
+ExecStart=@VENV_DIR@/bin/python -m hddmusicplayer
 Restart=always
 RestartSec=3
 

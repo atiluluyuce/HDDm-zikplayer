@@ -1,4 +1,4 @@
-# HDDm-zikplayer
+# hddmusicplayer
 
 Raspberry Pi 3 tabanlı, Sony HAP-Z1ES tarzı yerel müzik sunucusu. 500 GB'lik
 taşınabilir diskteki arşive bilgisayar açmadan, cihazın üzerindeki dokunmatik
@@ -126,8 +126,8 @@ Ayrıntı ve mimari: **[docs/03-mimari.md](docs/03-mimari.md)**
 ## Proje yapısı
 
 ```
-server/zikplayer/
-├── config.py        ZIK_* ortam değişkenleriyle ayarlar
+server/hddmusicplayer/
+├── config.py        HDDMUSICPLAYER_* ortam değişkenleriyle ayarlar
 ├── db.py            SQLite şeması, Türkçe uyumlu fold()
 ├── mpd.py           bağımlılıksız asenkron MPD istemcisi
 ├── scanner.py       artımlı kütüphane taraması, kapak çıkarma
@@ -147,14 +147,17 @@ pip'ten, geri kalan her şey apt'ten. FastAPI/pydantic kullanılmadı çünkü
 ## Servisler
 
 ```bash
-systemctl status zikplayer-api      # API + web arayüzü
-systemctl status zikplayer-panel    # 3.5" ekran
-systemctl status mpd                # ses motoru
-journalctl -u zikplayer-api -f      # günlükler
+systemctl status hddmusicplayer-api      # API + web arayüzü
+systemctl status hddmusicplayer-panel    # 3.5" ekran
+systemctl status mpd                     # ses motoru
+journalctl -u hddmusicplayer-api -f      # günlükler
 ```
 
-Ayarlar `/etc/zikplayer/zikplayer.env` içinde; değiştirdikten sonra ilgili
-servisi yeniden başlat.
+Ayarlar `/etc/hddmusicplayer/hddmusicplayer.env` içinde; değiştirdikten sonra
+ilgili servisi yeniden başlat.
+
+> Depo adı `HDDm-zikplayer` olarak kalıyor (klonlama yolunu bozmamak için);
+> cihazın, servislerin ve dosya yollarının adı `hddmusicplayer`.
 
 ## Durum
 

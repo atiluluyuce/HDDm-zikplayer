@@ -3,30 +3,30 @@
 ## Genel görünüm
 
 ```
-                        ┌──────────────────────────────┐
-  USB HDD ──────────────┤  MPD (ses motoru)            │
-  /media/music          │  çözme · gapless · ALSA      ├──► PCM5102A ──► amfi
-                        └──────────────┬───────────────┘
+                     ┌────────────────────────────────────┐
+  USB HDD ───────────┤  MPD (ses motoru)                  │
+  /media/music       │  çözme · gapless · ALSA            ├──► PCM5102A ──► amfi
+                     └─────────────────┬──────────────────┘
                                        │ MPD protokolü (localhost:6600)
-                        ┌──────────────┴───────────────┐
-                        │  zikplayer-api               │
-                        │  ┌────────────────────────┐  │
-                        │  │ player  durum + geçmiş │  │
-                        │  │ library gezinme/arama  │  │
-                        │  │ recomm. öneri motoru   │  │
-                        │  │ scanner artımlı tarama │  │
-                        │  └────────────────────────┘  │
-                        │  SQLite: /var/lib/zikplayer  │
-                        └───┬──────────────────────┬───┘
-                    HTTP+SSE│                      │HTTP+SSE
-                 ┌──────────┴────────┐   ┌─────────┴──────────┐
-                 │ zikplayer-panel   │   │ web arayüzü :8080  │
-                 │ /dev/fb1 · evdev  │   │ telefon / tablet   │
-                 │ EC11 encoder      │   │ / bilgisayar       │
-                 └───────────────────┘   └────────────────────┘
+                     ┌─────────────────┴──────────────────┐
+                     │  hddmusicplayer-api                │
+                     │  ┌──────────────────────────────┐  │
+                     │  │ player  durum + geçmiş       │  │
+                     │  │ library gezinme / arama      │  │
+                     │  │ recomm. öneri motoru         │  │
+                     │  │ scanner artımlı tarama       │  │
+                     │  └──────────────────────────────┘  │
+                     │  SQLite: /var/lib/hddmusicplayer   │
+                     └──┬───────────────────────┬─────────┘
+                HTTP+SSE│                       │HTTP+SSE
+            ┌───────────┬──────────┐  ┌─────────┬──────────┐
+            │ hddmusicplayer-panel │  │ web arayüzü :8080  │
+            │ /dev/fb1 · evdev     │  │ telefon / tablet   │
+            │ EC11 encoder         │  │ / bilgisayar       │
+            └──────────────────────┘  └────────────────────┘
 ```
 
-Üç ayrı süreç: **mpd**, **zikplayer-api**, **zikplayer-panel**. Panel çökerse
+Üç ayrı süreç: **mpd**, **hddmusicplayer-api**, **hddmusicplayer-panel**. Panel çökerse
 müzik kesilmez; API yeniden başlarsa MPD çalmaya devam eder.
 
 ---
@@ -37,7 +37,7 @@ müzik kesilmez; API yeniden başlarsa MPD çalmaya devam eder.
 
 Kendi çalarımızı yazmak yerine MPD kullanılıyor çünkü gapless çalma, ALSA
 tampon yönetimi, ReplayGain ve onlarca kodek yıllardır olgunlaşmış durumda.
-zikplayer'ın işi gezinme, öneri ve arayüz.
+hddmusicplayer'ın işi gezinme, öneri ve arayüz.
 
 Ama **gezinme ve arama MPD üzerinden yapılmıyor.** MPD'nin sorgu dili
 (`find`, `list`) etiket üzerinde doğrusal tarama yapar; 50 bin parçalık bir
@@ -214,7 +214,7 @@ sanatçı, aynı tür ve geçiş ilişkisi olan parçaları ayrıca çekip havuz
 geçmişe işlenir:
 
 ```
-tamamlandı = son_konum / süre >= 0.5      (ZIK_PLAY_COMPLETION_RATIO)
+tamamlandı = son_konum / süre >= 0.5      (HDDMUSICPLAYER_PLAY_COMPLETION_RATIO)
 ```
 
 - Tamamlandıysa `play_count++`, değilse `skip_count++`
@@ -227,8 +227,8 @@ geçiş anındaki son konumu biliyor olmamızı sağlıyor.
 
 ### Otomatik kuyruk
 
-Kuyrukta `ZIK_AUTOQUEUE_MIN` (5) parçadan az kaldığında öneri motoru
-`ZIK_AUTOQUEUE_BATCH` (15) parça ekler. Tohum olarak çalan parça kullanılır, o
+Kuyrukta `HDDMUSICPLAYER_AUTOQUEUE_MIN` (5) parçadan az kaldığında öneri motoru
+`HDDMUSICPLAYER_AUTOQUEUE_BATCH` (15) parça ekler. Tohum olarak çalan parça kullanılır, o
 anki kuyruk tamamen dışlanır. Böylece kuyruk hiç bitmez ve akış çalan parçaya
 bağlı kalır.
 

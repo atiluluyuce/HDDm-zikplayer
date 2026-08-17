@@ -1,8 +1,8 @@
 [Unit]
-Description=zikplayer 3.5" dokunmatik panel arayüzü
+Description=hddmusicplayer 3.5" dokunmatik panel arayüzü
 Documentation=https://github.com/atiluluyuce/HDDm-zikplayer
-After=zikplayer-api.service
-Wants=zikplayer-api.service
+After=hddmusicplayer-api.service
+Wants=hddmusicplayer-api.service
 
 [Service]
 Type=simple
@@ -11,10 +11,10 @@ Group=@USER@
 # Framebuffer, dokunmatik ve GPIO erişimi için ek gruplar.
 SupplementaryGroups=video input gpio audio
 WorkingDirectory=@REPO_DIR@/server
-EnvironmentFile=/etc/zikplayer/zikplayer.env
+EnvironmentFile=/etc/hddmusicplayer/hddmusicplayer.env
 Environment=PYTHONUNBUFFERED=1
-Environment=ZIK_API_URL=http://127.0.0.1:8080
-ExecStart=@VENV_DIR@/bin/python -m zikplayer.panel
+Environment=HDDMUSICPLAYER_API_URL=http://127.0.0.1:8080
+ExecStart=@VENV_DIR@/bin/python -m hddmusicplayer.panel
 Restart=always
 RestartSec=5
 

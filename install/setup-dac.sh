@@ -19,11 +19,11 @@ CONFIG=/boot/firmware/config.txt
 [[ -f "$CONFIG" ]] || { warn "config.txt bulunamadı"; exit 1; }
 log "Yapılandırma dosyası: $CONFIG"
 
-cp -n "$CONFIG" "$CONFIG.zikplayer-bak" 2>/dev/null || true
+cp -n "$CONFIG" "$CONFIG.hddmusicplayer-bak" 2>/dev/null || true
 
 # Dahili analog çıkış kapalı olsun ki DAC 0 numaralı kart olsun.
 if grep -qE '^\s*dtparam=audio=on' "$CONFIG"; then
-  sed -i 's/^\s*dtparam=audio=on/#&  # zikplayer: I2S DAC kullanılıyor/' "$CONFIG"
+  sed -i 's/^\s*dtparam=audio=on/#&  # hddmusicplayer: I2S DAC kullanılıyor/' "$CONFIG"
   log "dtparam=audio=on devre dışı bırakıldı"
 fi
 
@@ -36,7 +36,7 @@ add_line() {
   fi
 }
 
-grep -q '# --- zikplayer ---' "$CONFIG" || printf '\n# --- zikplayer ---\n' >> "$CONFIG"
+grep -q '# --- hddmusicplayer ---' "$CONFIG" || printf '\n# --- hddmusicplayer ---\n' >> "$CONFIG"
 add_line 'dtparam=audio=off'
 add_line 'dtoverlay=hifiberry-dac'
 
@@ -46,7 +46,7 @@ add_line 'dtoverlay=hifiberry-dac'
 # çalarak denetimi baştan yaratıyoruz.
 if aplay -l 2>/dev/null | grep -qi 'sndrpihifiberry'; then
   log "DAC zaten etkin, softvol denetimi hazırlanıyor"
-  aplay -D zikplayer -f cd -d 1 /dev/zero >/dev/null 2>&1 || true
+  aplay -D hddmusicplayer -f cd -d 1 /dev/zero >/dev/null 2>&1 || true
   amixer -c sndrpihifiberry sset SoftMaster 70% >/dev/null 2>&1 || true
   amixer -c sndrpihifiberry scontrols 2>/dev/null || true
 else
@@ -75,5 +75,5 @@ Kablolama hatırlatması (Pi 3 40-pin header):
 
 Sonrasında kontrol:
     aplay -l                              # sndrpihifiberry görünmeli
-    speaker-test -D zikplayer -c 2 -t sine -l 1
+    speaker-test -D hddmusicplayer -c 2 -t sine -l 1
 EOF
