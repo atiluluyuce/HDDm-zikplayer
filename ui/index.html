@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0d0f12">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>zikplayer</title>
+<link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="dot" id="conn-dot" title="bağlantı"></span>
+    <span>zikplayer</span>
+  </div>
+  <form class="search" id="search-form" role="search" autocomplete="off">
+    <input type="search" id="search-input" placeholder="Ara — sanatçı, albüm, parça" aria-label="Ara">
+  </form>
+  <button class="ghost" id="shuffle-all" title="Akıllı karıştır">Karıştır</button>
+</header>
+
+<nav class="tabs" id="tabs">
+  <a href="#/home" data-tab="home" class="active">Ana Sayfa</a>
+  <a href="#/albums" data-tab="albums">Albümler</a>
+  <a href="#/artists" data-tab="artists">Sanatçılar</a>
+  <a href="#/queue" data-tab="queue">Kuyruk</a>
+  <a href="#/settings" data-tab="settings">Ayarlar</a>
+</nav>
+
+<main id="view" aria-live="polite"></main>
+
+<footer class="player" id="player" hidden>
+  <button class="np-art" id="np-art-button" aria-label="Çalan parçayı aç">
+    <img id="np-art" alt="">
+  </button>
+  <div class="np-meta" id="np-meta">
+    <div class="np-title" id="np-title">—</div>
+    <div class="np-artist" id="np-artist"></div>
+    <div class="np-bar"><span id="np-progress"></span></div>
+  </div>
+  <div class="np-controls">
+    <button id="np-prev" aria-label="Önceki">⏮</button>
+    <button id="np-toggle" class="primary" aria-label="Çal/Duraklat">▶</button>
+    <button id="np-next" aria-label="Sonraki">⏭</button>
+  </div>
+</footer>
+
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet-inner">
+    <button class="sheet-close" id="sheet-close" aria-label="Kapat">✕</button>
+    <div id="sheet-body"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" hidden></div>
+
+<script type="module" src="/js/app.js"></script>
+</body>
+</html>

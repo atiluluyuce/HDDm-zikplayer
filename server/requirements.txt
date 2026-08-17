@@ -1,0 +1,13 @@
+# Sanal ortama pip ile kurulanlar — hepsi saf Python, derleme gerektirmez.
+# 32-bit Raspberry Pi OS'ta hazır wheel bulunmayan paketlerden (pydantic gibi)
+# bilinçli olarak kaçınıldı; bu yüzden FastAPI yerine düz Starlette kullanılıyor.
+starlette>=0.37,<1.0
+uvicorn>=0.29,<1.0
+
+# Aşağıdakiler apt üzerinden kurulur (install.sh hallediyor), pip ile DEĞİL:
+#   python3-pil        -> kapak görselleri, panel çizimi
+#   python3-numpy      -> framebuffer RGB565 dönüşümü
+#   python3-mutagen    -> etiket okuma
+#   python3-evdev      -> dokunmatik ekran
+#   python3-gpiozero   -> EC11 encoder
+#   python3-lgpio      -> gpiozero'nun Bookworm'daki GPIO arka ucu

@@ -1,0 +1,35 @@
+[Unit]
+Description=zikplayer API ve web arayüzü
+Documentation=https://github.com/atiluluyuce/HDDm-zikplayer
+After=network-online.target mpd.service
+Wants=network-online.target
+Requires=mpd.service
+
+[Service]
+Type=simple
+User=@USER@
+Group=@USER@
+WorkingDirectory=@REPO_DIR@/server
+EnvironmentFile=/etc/zikplayer/zikplayer.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=@VENV_DIR@/bin/python -m zikplayer
+Restart=always
+RestartSec=3
+
+# İlk taramada veya disk uyanırken yavaş kalkabilir; systemd erken vazgeçmesin.
+TimeoutStartSec=120
+
+# Ilımlı sıkılaştırma. Bilinçli olarak kullanılmayanlar:
+#   NoNewPrivileges  -> sudo'yu engelleyip kapat/yeniden başlat tuşlarını bozar
+#   ProtectSystem=strict -> sonradan bağlanan USB diskin ad alanına yansımasını
+#                           zorlaştırıyor; disk takılı değilken de açılabilmek
+#                           istediğimiz için RequiresMountsFor de kullanmıyoruz
+ProtectSystem=full
+PrivateTmp=true
+ProtectKernelTunables=true
+ProtectControlGroups=true
+RestrictSUIDSGID=false
+LockPersonality=true
+
+[Install]
+WantedBy=multi-user.target

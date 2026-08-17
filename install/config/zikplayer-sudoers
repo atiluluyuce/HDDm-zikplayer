@@ -1,0 +1,3 @@
+# zikplayer servisinin arayüzden güç işlemlerini yapabilmesi için.
+# Yalnızca bu iki komut, parolasız. Başka hiçbir yetki verilmiyor.
+zikplayer ALL=(root) NOPASSWD: /usr/bin/systemctl poweroff, /usr/bin/systemctl reboot
