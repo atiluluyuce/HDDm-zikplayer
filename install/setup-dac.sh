@@ -58,13 +58,13 @@ cat <<'EOF'
 Kablolama hatırlatması (Pi 3 40-pin header):
 
     PCM5102A       Pi pin
-    ---------      -----------------------
-    VIN            4   (5V)
-    GND            6   (GND)
-    BCK            12  (GPIO18 / PCM_CLK)
-    LCK            35  (GPIO19 / PCM_FS)
-    DIN            40  (GPIO21 / PCM_DOUT)
-    SCK            9 veya 39 (GND)   <-- UNUTMA
+    ---------      ------------------------------------
+    VIN            4   (5V)                 ekran altinda
+    GND            34  (GND)                serbest
+    BCK            12  (GPIO18 / PCM_CLK)   ekran altinda
+    LCK            35  (GPIO19 / PCM_FS)    serbest
+    DIN            40  (GPIO21 / PCM_DOUT)  serbest
+    SCK            modulun kendi GND padine   <-- UNUTMA
 
   SCK ucu GND'ye çekilmezse yonga dahili PLL'i devreye almaz;
   DAC ya hiç ses vermez ya da cızırtı üretir.

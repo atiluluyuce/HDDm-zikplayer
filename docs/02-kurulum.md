@@ -70,7 +70,7 @@ Diski hangi biçimde tutmalı:
 
 ## 3. DAC'ı etkinleştir
 
-Önce kabloları bağla (şema: [01-donanim.md](01-donanim.md)), sonra:
+Önce kabloları bağla — **[kablolama şeması: wiring.svg](wiring.svg)** — sonra:
 
 ```bash
 sudo ./install/setup-dac.sh
@@ -117,7 +117,7 @@ Rezistif dokunmatik yavaş kalırsa fiziksel kontrol devreye girer. Bağlantı:
 | CLK (A) | 29 | GPIO5 |
 | DT (B) | 31 | GPIO6 |
 | SW (buton) | 33 | GPIO13 |
-| GND (C) | 30 veya 34 | — |
+| GND (C) | 39 | — |
 
 Pinler bilinçli olarak **27-40 aralığından** seçildi: 3.5" ekran 26 pinlik
 olduğu için bu bölge açıkta kalıyor, ekran takılıyken bile erişilebilir.

@@ -1,0 +1,427 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1802" width="1200" height="1802">
+<rect width="1200" height="1802" fill="#fbfbf9"/>
+<text x="48" y="62" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700">hddmusicplayer — kablolama şeması</text>
+<text x="48" y="92" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="15" fill="#6b7280" text-anchor="start" font-weight="400">Raspberry Pi 3 Model B  ·  PCM5102A I2S DAC  ·  EC11 döner encoder  ·  Waveshare 3.5" RPi LCD (A)</text>
+<line x1="48" y1="112" x2="1152" y2="112" stroke="#d4d4d8" stroke-width="2"/>
+<text x="600" y="140" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#111827" text-anchor="middle" font-weight="700">J8  ·  40 pin GPIO header</text>
+<text x="600" y="158" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#6b7280" text-anchor="middle" font-weight="400">şemada 90° döndürülmüş: yukarıdan aşağı pin 1 → 40</text>
+<rect x="268" y="181" width="276" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="656" y="181" width="496" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="268" y="213" width="276" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="656" y="213" width="496" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="268" y="245" width="276" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="656" y="245" width="496" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="268" y="277" width="276" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="656" y="277" width="496" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="268" y="309" width="276" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="656" y="309" width="496" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="268" y="341" width="276" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="656" y="341" width="496" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="268" y="373" width="276" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="656" y="373" width="496" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="268" y="405" width="276" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="656" y="405" width="496" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="268" y="437" width="276" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="656" y="437" width="496" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="268" y="469" width="276" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="656" y="469" width="496" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="268" y="501" width="276" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="656" y="501" width="496" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="268" y="533" width="276" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="656" y="533" width="496" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="268" y="565" width="276" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="656" y="565" width="496" height="30" rx="4" fill="#f1ecfe" opacity="0.75"/>
+<rect x="268" y="597" width="276" height="30" rx="4" fill="#fbfbf9" opacity="0.75"/>
+<rect x="656" y="597" width="496" height="30" rx="4" fill="#fbfbf9" opacity="0.75"/>
+<rect x="268" y="629" width="276" height="30" rx="4" fill="#f4f4f5" opacity="0.75"/>
+<rect x="656" y="629" width="496" height="30" rx="4" fill="#f4f4f5" opacity="0.75"/>
+<rect x="268" y="661" width="276" height="30" rx="4" fill="#fbfbf9" opacity="0.75"/>
+<rect x="656" y="661" width="496" height="30" rx="4" fill="#fbfbf9" opacity="0.75"/>
+<rect x="268" y="693" width="276" height="30" rx="4" fill="#f4f4f5" opacity="0.75"/>
+<rect x="656" y="693" width="496" height="30" rx="4" fill="#f4f4f5" opacity="0.75"/>
+<rect x="268" y="725" width="276" height="30" rx="4" fill="#fbfbf9" opacity="0.75"/>
+<rect x="656" y="725" width="496" height="30" rx="4" fill="#fbfbf9" opacity="0.75"/>
+<rect x="268" y="757" width="276" height="30" rx="4" fill="#f4f4f5" opacity="0.75"/>
+<rect x="656" y="757" width="496" height="30" rx="4" fill="#f4f4f5" opacity="0.75"/>
+<rect x="268" y="789" width="276" height="30" rx="4" fill="#fbfbf9" opacity="0.75"/>
+<rect x="656" y="789" width="496" height="30" rx="4" fill="#fbfbf9" opacity="0.75"/>
+<rect x="548" y="174" width="104" height="652" rx="8" fill="#1f2937"/>
+<rect x="236" y="174" width="14" height="422" rx="6" fill="#f1ecfe" stroke="#6d28d9" stroke-width="1"/>
+<text x="224" y="385" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6d28d9" font-weight="700" text-anchor="middle" transform="rotate(-90 224 385)">EKRAN KAPLIYOR  ·  pin 1–26</text>
+<rect x="236" y="596" width="14" height="230" rx="6" fill="#dcfce7" stroke="#15803d" stroke-width="1"/>
+<text x="224" y="711" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12.5" fill="#15803d" font-weight="700" text-anchor="middle" transform="rotate(-90 224 711)">27–40 AÇIKTA</text>
+<rect x="567" y="189" width="14" height="14" rx="2" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+<line x1="566" y1="196" x2="538" y2="196" stroke="#ea580c" stroke-width="2"/>
+<rect x="500" y="185" width="38" height="22" rx="5" fill="#ffedd5" stroke="#ea580c" stroke-width="1.5"/>
+<text x="519.0" y="201" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#ea580c" text-anchor="middle" font-weight="700">1</text>
+<text x="488" y="201" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="end" font-weight="400">3V3</text>
+<circle cx="626" cy="196" r="7.5" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<line x1="634" y1="196" x2="662" y2="196" stroke="#dc2626" stroke-width="2"/>
+<rect x="662" y="185" width="38" height="22" rx="5" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+<text x="681.0" y="201" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#dc2626" text-anchor="middle" font-weight="700">2</text>
+<text x="708" y="201" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="start" font-weight="400">5V</text>
+<circle cx="574" cy="228" r="7.5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="2"/>
+<line x1="566" y1="228" x2="538" y2="228" stroke="#a1a1aa" stroke-width="2"/>
+<rect x="500" y="217" width="38" height="22" rx="5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="519.0" y="233" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="700">3</text>
+<text x="488" y="233" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="end" font-weight="400">GPIO2 / SDA1</text>
+<circle cx="626" cy="228" r="7.5" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+<line x1="634" y1="228" x2="662" y2="228" stroke="#b45309" stroke-width="2"/>
+<rect x="662" y="217" width="38" height="22" rx="5" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/>
+<text x="681.0" y="233" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#b45309" text-anchor="middle" font-weight="700">4</text>
+<text x="708" y="233" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#111827" text-anchor="start" font-weight="600">5V</text>
+<text x="844" y="233" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#b45309" text-anchor="start" font-weight="700">DAC · VIN</text>
+<text x="944" y="233" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11" fill="#b91c1c" text-anchor="start" font-weight="700">⚠ ekranın altında</text>
+<circle cx="574" cy="260" r="7.5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="2"/>
+<line x1="566" y1="260" x2="538" y2="260" stroke="#a1a1aa" stroke-width="2"/>
+<rect x="500" y="249" width="38" height="22" rx="5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="519.0" y="265" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="700">5</text>
+<text x="488" y="265" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="end" font-weight="400">GPIO3 / SCL1</text>
+<circle cx="626" cy="260" r="7.5" fill="#e5e7eb" stroke="#374151" stroke-width="2"/>
+<line x1="634" y1="260" x2="662" y2="260" stroke="#374151" stroke-width="2"/>
+<rect x="662" y="249" width="38" height="22" rx="5" fill="#e5e7eb" stroke="#374151" stroke-width="1.5"/>
+<text x="681.0" y="265" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#374151" text-anchor="middle" font-weight="700">6</text>
+<text x="708" y="265" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="start" font-weight="400">GND</text>
+<circle cx="574" cy="292" r="7.5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="2"/>
+<line x1="566" y1="292" x2="538" y2="292" stroke="#a1a1aa" stroke-width="2"/>
+<rect x="500" y="281" width="38" height="22" rx="5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="519.0" y="297" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="700">7</text>
+<text x="488" y="297" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="end" font-weight="400">GPIO4</text>
+<circle cx="626" cy="292" r="7.5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="2"/>
+<line x1="634" y1="292" x2="662" y2="292" stroke="#a1a1aa" stroke-width="2"/>
+<rect x="662" y="281" width="38" height="22" rx="5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="681.0" y="297" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="700">8</text>
+<text x="708" y="297" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="start" font-weight="400">GPIO14 / TXD</text>
+<circle cx="574" cy="324" r="7.5" fill="#e5e7eb" stroke="#374151" stroke-width="2"/>
+<line x1="566" y1="324" x2="538" y2="324" stroke="#374151" stroke-width="2"/>
+<rect x="500" y="313" width="38" height="22" rx="5" fill="#e5e7eb" stroke="#374151" stroke-width="1.5"/>
+<text x="519.0" y="329" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#374151" text-anchor="middle" font-weight="700">9</text>
+<text x="488" y="329" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="end" font-weight="400">GND</text>
+<circle cx="626" cy="324" r="7.5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="2"/>
+<line x1="634" y1="324" x2="662" y2="324" stroke="#a1a1aa" stroke-width="2"/>
+<rect x="662" y="313" width="38" height="22" rx="5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="681.0" y="329" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="700">10</text>
+<text x="708" y="329" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="start" font-weight="400">GPIO15 / RXD</text>
+<circle cx="574" cy="356" r="7.5" fill="#f1ecfe" stroke="#6d28d9" stroke-width="2"/>
+<line x1="566" y1="356" x2="538" y2="356" stroke="#6d28d9" stroke-width="2"/>
+<rect x="500" y="345" width="38" height="22" rx="5" fill="#f1ecfe" stroke="#6d28d9" stroke-width="1.5"/>
+<text x="519.0" y="361" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#6d28d9" text-anchor="middle" font-weight="700">11</text>
+<text x="488" y="361" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#111827" text-anchor="end" font-weight="600">GPIO17</text>
+<text x="356" y="361" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#6d28d9" text-anchor="end" font-weight="700">LCD</text>
+<circle cx="626" cy="356" r="7.5" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+<line x1="634" y1="356" x2="662" y2="356" stroke="#b45309" stroke-width="2"/>
+<rect x="662" y="345" width="38" height="22" rx="5" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/>
+<text x="681.0" y="361" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#b45309" text-anchor="middle" font-weight="700">12</text>
+<text x="708" y="361" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#111827" text-anchor="start" font-weight="600">GPIO18 / PCM_CLK</text>
+<text x="844" y="361" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#b45309" text-anchor="start" font-weight="700">DAC · BCK</text>
+<text x="944" y="361" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11" fill="#b91c1c" text-anchor="start" font-weight="700">⚠ ekranın altında</text>
+<circle cx="574" cy="388" r="7.5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="2"/>
+<line x1="566" y1="388" x2="538" y2="388" stroke="#a1a1aa" stroke-width="2"/>
+<rect x="500" y="377" width="38" height="22" rx="5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="519.0" y="393" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="700">13</text>
+<text x="488" y="393" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="end" font-weight="400">GPIO27</text>
+<circle cx="626" cy="388" r="7.5" fill="#e5e7eb" stroke="#374151" stroke-width="2"/>
+<line x1="634" y1="388" x2="662" y2="388" stroke="#374151" stroke-width="2"/>
+<rect x="662" y="377" width="38" height="22" rx="5" fill="#e5e7eb" stroke="#374151" stroke-width="1.5"/>
+<text x="681.0" y="393" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#374151" text-anchor="middle" font-weight="700">14</text>
+<text x="708" y="393" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="start" font-weight="400">GND</text>
+<circle cx="574" cy="420" r="7.5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="2"/>
+<line x1="566" y1="420" x2="538" y2="420" stroke="#a1a1aa" stroke-width="2"/>
+<rect x="500" y="409" width="38" height="22" rx="5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="519.0" y="425" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="700">15</text>
+<text x="488" y="425" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="end" font-weight="400">GPIO22</text>
+<circle cx="626" cy="420" r="7.5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="2"/>
+<line x1="634" y1="420" x2="662" y2="420" stroke="#a1a1aa" stroke-width="2"/>
+<rect x="662" y="409" width="38" height="22" rx="5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="681.0" y="425" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="700">16</text>
+<text x="708" y="425" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="start" font-weight="400">GPIO23</text>
+<circle cx="574" cy="452" r="7.5" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+<line x1="566" y1="452" x2="538" y2="452" stroke="#ea580c" stroke-width="2"/>
+<rect x="500" y="441" width="38" height="22" rx="5" fill="#ffedd5" stroke="#ea580c" stroke-width="1.5"/>
+<text x="519.0" y="457" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#ea580c" text-anchor="middle" font-weight="700">17</text>
+<text x="488" y="457" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="end" font-weight="400">3V3</text>
+<circle cx="626" cy="452" r="7.5" fill="#f1ecfe" stroke="#6d28d9" stroke-width="2"/>
+<line x1="634" y1="452" x2="662" y2="452" stroke="#6d28d9" stroke-width="2"/>
+<rect x="662" y="441" width="38" height="22" rx="5" fill="#f1ecfe" stroke="#6d28d9" stroke-width="1.5"/>
+<text x="681.0" y="457" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#6d28d9" text-anchor="middle" font-weight="700">18</text>
+<text x="708" y="457" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#111827" text-anchor="start" font-weight="600">GPIO24</text>
+<text x="844" y="457" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#6d28d9" text-anchor="start" font-weight="700">LCD</text>
+<circle cx="574" cy="484" r="7.5" fill="#f1ecfe" stroke="#6d28d9" stroke-width="2"/>
+<line x1="566" y1="484" x2="538" y2="484" stroke="#6d28d9" stroke-width="2"/>
+<rect x="500" y="473" width="38" height="22" rx="5" fill="#f1ecfe" stroke="#6d28d9" stroke-width="1.5"/>
+<text x="519.0" y="489" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#6d28d9" text-anchor="middle" font-weight="700">19</text>
+<text x="488" y="489" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#111827" text-anchor="end" font-weight="600">GPIO10 / MOSI</text>
+<text x="356" y="489" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#6d28d9" text-anchor="end" font-weight="700">LCD</text>
+<circle cx="626" cy="484" r="7.5" fill="#e5e7eb" stroke="#374151" stroke-width="2"/>
+<line x1="634" y1="484" x2="662" y2="484" stroke="#374151" stroke-width="2"/>
+<rect x="662" y="473" width="38" height="22" rx="5" fill="#e5e7eb" stroke="#374151" stroke-width="1.5"/>
+<text x="681.0" y="489" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#374151" text-anchor="middle" font-weight="700">20</text>
+<text x="708" y="489" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="start" font-weight="400">GND</text>
+<circle cx="574" cy="516" r="7.5" fill="#f1ecfe" stroke="#6d28d9" stroke-width="2"/>
+<line x1="566" y1="516" x2="538" y2="516" stroke="#6d28d9" stroke-width="2"/>
+<rect x="500" y="505" width="38" height="22" rx="5" fill="#f1ecfe" stroke="#6d28d9" stroke-width="1.5"/>
+<text x="519.0" y="521" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#6d28d9" text-anchor="middle" font-weight="700">21</text>
+<text x="488" y="521" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#111827" text-anchor="end" font-weight="600">GPIO9 / MISO</text>
+<text x="356" y="521" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#6d28d9" text-anchor="end" font-weight="700">LCD</text>
+<circle cx="626" cy="516" r="7.5" fill="#f1ecfe" stroke="#6d28d9" stroke-width="2"/>
+<line x1="634" y1="516" x2="662" y2="516" stroke="#6d28d9" stroke-width="2"/>
+<rect x="662" y="505" width="38" height="22" rx="5" fill="#f1ecfe" stroke="#6d28d9" stroke-width="1.5"/>
+<text x="681.0" y="521" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#6d28d9" text-anchor="middle" font-weight="700">22</text>
+<text x="708" y="521" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#111827" text-anchor="start" font-weight="600">GPIO25</text>
+<text x="844" y="521" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#6d28d9" text-anchor="start" font-weight="700">LCD</text>
+<circle cx="574" cy="548" r="7.5" fill="#f1ecfe" stroke="#6d28d9" stroke-width="2"/>
+<line x1="566" y1="548" x2="538" y2="548" stroke="#6d28d9" stroke-width="2"/>
+<rect x="500" y="537" width="38" height="22" rx="5" fill="#f1ecfe" stroke="#6d28d9" stroke-width="1.5"/>
+<text x="519.0" y="553" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#6d28d9" text-anchor="middle" font-weight="700">23</text>
+<text x="488" y="553" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#111827" text-anchor="end" font-weight="600">GPIO11 / SCLK</text>
+<text x="356" y="553" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#6d28d9" text-anchor="end" font-weight="700">LCD</text>
+<circle cx="626" cy="548" r="7.5" fill="#f1ecfe" stroke="#6d28d9" stroke-width="2"/>
+<line x1="634" y1="548" x2="662" y2="548" stroke="#6d28d9" stroke-width="2"/>
+<rect x="662" y="537" width="38" height="22" rx="5" fill="#f1ecfe" stroke="#6d28d9" stroke-width="1.5"/>
+<text x="681.0" y="553" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#6d28d9" text-anchor="middle" font-weight="700">24</text>
+<text x="708" y="553" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#111827" text-anchor="start" font-weight="600">GPIO8 / CE0</text>
+<text x="844" y="553" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#6d28d9" text-anchor="start" font-weight="700">LCD</text>
+<circle cx="574" cy="580" r="7.5" fill="#e5e7eb" stroke="#374151" stroke-width="2"/>
+<line x1="566" y1="580" x2="538" y2="580" stroke="#374151" stroke-width="2"/>
+<rect x="500" y="569" width="38" height="22" rx="5" fill="#e5e7eb" stroke="#374151" stroke-width="1.5"/>
+<text x="519.0" y="585" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#374151" text-anchor="middle" font-weight="700">25</text>
+<text x="488" y="585" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="end" font-weight="400">GND</text>
+<circle cx="626" cy="580" r="7.5" fill="#f1ecfe" stroke="#6d28d9" stroke-width="2"/>
+<line x1="634" y1="580" x2="662" y2="580" stroke="#6d28d9" stroke-width="2"/>
+<rect x="662" y="569" width="38" height="22" rx="5" fill="#f1ecfe" stroke="#6d28d9" stroke-width="1.5"/>
+<text x="681.0" y="585" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#6d28d9" text-anchor="middle" font-weight="700">26</text>
+<text x="708" y="585" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#111827" text-anchor="start" font-weight="600">GPIO7 / CE1</text>
+<text x="844" y="585" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#6d28d9" text-anchor="start" font-weight="700">LCD</text>
+<circle cx="574" cy="612" r="7.5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="2"/>
+<line x1="566" y1="612" x2="538" y2="612" stroke="#a1a1aa" stroke-width="2"/>
+<rect x="500" y="601" width="38" height="22" rx="5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="519.0" y="617" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="700">27</text>
+<text x="488" y="617" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="end" font-weight="400">GPIO0 / ID_SD</text>
+<circle cx="626" cy="612" r="7.5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="2"/>
+<line x1="634" y1="612" x2="662" y2="612" stroke="#a1a1aa" stroke-width="2"/>
+<rect x="662" y="601" width="38" height="22" rx="5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="681.0" y="617" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="700">28</text>
+<text x="708" y="617" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="start" font-weight="400">GPIO1 / ID_SC</text>
+<circle cx="574" cy="644" r="7.5" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<line x1="566" y1="644" x2="538" y2="644" stroke="#0f766e" stroke-width="2"/>
+<rect x="500" y="633" width="38" height="22" rx="5" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.5"/>
+<text x="519.0" y="649" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#0f766e" text-anchor="middle" font-weight="700">29</text>
+<text x="488" y="649" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#111827" text-anchor="end" font-weight="600">GPIO5</text>
+<text x="356" y="649" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#0f766e" text-anchor="end" font-weight="700">EC11 · CLK</text>
+<circle cx="626" cy="644" r="7.5" fill="#e5e7eb" stroke="#374151" stroke-width="2"/>
+<line x1="634" y1="644" x2="662" y2="644" stroke="#374151" stroke-width="2"/>
+<rect x="662" y="633" width="38" height="22" rx="5" fill="#e5e7eb" stroke="#374151" stroke-width="1.5"/>
+<text x="681.0" y="649" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#374151" text-anchor="middle" font-weight="700">30</text>
+<text x="708" y="649" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="start" font-weight="400">GND</text>
+<circle cx="574" cy="676" r="7.5" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<line x1="566" y1="676" x2="538" y2="676" stroke="#0f766e" stroke-width="2"/>
+<rect x="500" y="665" width="38" height="22" rx="5" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.5"/>
+<text x="519.0" y="681" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#0f766e" text-anchor="middle" font-weight="700">31</text>
+<text x="488" y="681" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#111827" text-anchor="end" font-weight="600">GPIO6</text>
+<text x="356" y="681" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#0f766e" text-anchor="end" font-weight="700">EC11 · DT</text>
+<circle cx="626" cy="676" r="7.5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="2"/>
+<line x1="634" y1="676" x2="662" y2="676" stroke="#a1a1aa" stroke-width="2"/>
+<rect x="662" y="665" width="38" height="22" rx="5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="681.0" y="681" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="700">32</text>
+<text x="708" y="681" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="start" font-weight="400">GPIO12</text>
+<circle cx="574" cy="708" r="7.5" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<line x1="566" y1="708" x2="538" y2="708" stroke="#0f766e" stroke-width="2"/>
+<rect x="500" y="697" width="38" height="22" rx="5" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.5"/>
+<text x="519.0" y="713" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#0f766e" text-anchor="middle" font-weight="700">33</text>
+<text x="488" y="713" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#111827" text-anchor="end" font-weight="600">GPIO13</text>
+<text x="356" y="713" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#0f766e" text-anchor="end" font-weight="700">EC11 · SW</text>
+<circle cx="626" cy="708" r="7.5" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+<line x1="634" y1="708" x2="662" y2="708" stroke="#b45309" stroke-width="2"/>
+<rect x="662" y="697" width="38" height="22" rx="5" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/>
+<text x="681.0" y="713" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#b45309" text-anchor="middle" font-weight="700">34</text>
+<text x="708" y="713" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#111827" text-anchor="start" font-weight="600">GND</text>
+<text x="844" y="713" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#b45309" text-anchor="start" font-weight="700">DAC · GND</text>
+<circle cx="574" cy="740" r="7.5" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+<line x1="566" y1="740" x2="538" y2="740" stroke="#b45309" stroke-width="2"/>
+<rect x="500" y="729" width="38" height="22" rx="5" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/>
+<text x="519.0" y="745" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#b45309" text-anchor="middle" font-weight="700">35</text>
+<text x="488" y="745" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#111827" text-anchor="end" font-weight="600">GPIO19 / PCM_FS</text>
+<text x="356" y="745" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#b45309" text-anchor="end" font-weight="700">DAC · LCK</text>
+<circle cx="626" cy="740" r="7.5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="2"/>
+<line x1="634" y1="740" x2="662" y2="740" stroke="#a1a1aa" stroke-width="2"/>
+<rect x="662" y="729" width="38" height="22" rx="5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="681.0" y="745" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="700">36</text>
+<text x="708" y="745" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="start" font-weight="400">GPIO16</text>
+<circle cx="574" cy="772" r="7.5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="2"/>
+<line x1="566" y1="772" x2="538" y2="772" stroke="#a1a1aa" stroke-width="2"/>
+<rect x="500" y="761" width="38" height="22" rx="5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="519.0" y="777" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="700">37</text>
+<text x="488" y="777" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="end" font-weight="400">GPIO26</text>
+<circle cx="626" cy="772" r="7.5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="2"/>
+<line x1="634" y1="772" x2="662" y2="772" stroke="#a1a1aa" stroke-width="2"/>
+<rect x="662" y="761" width="38" height="22" rx="5" fill="#f4f4f5" stroke="#a1a1aa" stroke-width="1.5"/>
+<text x="681.0" y="777" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="700">38</text>
+<text x="708" y="777" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="start" font-weight="400">GPIO20 / PCM_DIN</text>
+<circle cx="574" cy="804" r="7.5" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<line x1="566" y1="804" x2="538" y2="804" stroke="#0f766e" stroke-width="2"/>
+<rect x="500" y="793" width="38" height="22" rx="5" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.5"/>
+<text x="519.0" y="809" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#0f766e" text-anchor="middle" font-weight="700">39</text>
+<text x="488" y="809" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#111827" text-anchor="end" font-weight="600">GND</text>
+<text x="356" y="809" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#0f766e" text-anchor="end" font-weight="700">EC11 · GND</text>
+<circle cx="626" cy="804" r="7.5" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+<line x1="634" y1="804" x2="662" y2="804" stroke="#b45309" stroke-width="2"/>
+<rect x="662" y="793" width="38" height="22" rx="5" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/>
+<text x="681.0" y="809" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#b45309" text-anchor="middle" font-weight="700">40</text>
+<text x="708" y="809" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#111827" text-anchor="start" font-weight="600">GPIO21 / PCM_DOUT</text>
+<text x="844" y="809" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#b45309" text-anchor="start" font-weight="700">DAC · DIN</text>
+<rect x="48" y="866" width="560" height="200" rx="10" fill="#ffffff" stroke="#d4d4d8" stroke-width="1"/>
+<text x="70" y="900" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="15" fill="#111827" text-anchor="start" font-weight="700">Renk kodu</text>
+<circle cx="80" cy="934" r="7.5" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+<text x="98" y="939" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#111827" text-anchor="start" font-weight="400">PCM5102A DAC</text>
+<circle cx="348" cy="934" r="7.5" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text x="366" y="939" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#111827" text-anchor="start" font-weight="400">5V</text>
+<circle cx="80" cy="968" r="7.5" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<text x="98" y="973" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#111827" text-anchor="start" font-weight="400">EC11 encoder</text>
+<circle cx="348" cy="968" r="7.5" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+<text x="366" y="973" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#111827" text-anchor="start" font-weight="400">3.3V</text>
+<circle cx="80" cy="1002" r="7.5" fill="#f1ecfe" stroke="#6d28d9" stroke-width="2"/>
+<text x="98" y="1007" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#111827" text-anchor="start" font-weight="400">ekranın kullandığı sinyal</text>
+<circle cx="348" cy="1002" r="7.5" fill="#e5e7eb" stroke="#374151" stroke-width="2"/>
+<text x="366" y="1007" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#111827" text-anchor="start" font-weight="400">GND</text>
+<text x="72" y="1044" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#b91c1c" text-anchor="start" font-weight="700">⚠ = pin fiziksel olarak ekranın altında kalıyor</text>
+<rect x="632" y="866" width="520" height="200" rx="10" fill="#ffffff" stroke="#d4d4d8" stroke-width="1"/>
+<text x="654" y="900" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="15" fill="#111827" text-anchor="start" font-weight="700">Kartı nasıl tutuyoruz</text>
+<rect x="656" y="916" width="472" height="96" rx="8" fill="#eef2f4" stroke="#9ca3af" stroke-width="1"/>
+<rect x="700" y="926" width="190" height="15" rx="3" fill="#1f2937"/>
+<circle cx="706.0" cy="930" r="2" fill="#facc15"/>
+<circle cx="706.0" cy="937" r="2" fill="#facc15"/>
+<circle cx="715.5" cy="930" r="2" fill="#facc15"/>
+<circle cx="715.5" cy="937" r="2" fill="#facc15"/>
+<circle cx="725.0" cy="930" r="2" fill="#facc15"/>
+<circle cx="725.0" cy="937" r="2" fill="#facc15"/>
+<circle cx="734.5" cy="930" r="2" fill="#facc15"/>
+<circle cx="734.5" cy="937" r="2" fill="#facc15"/>
+<circle cx="744.0" cy="930" r="2" fill="#facc15"/>
+<circle cx="744.0" cy="937" r="2" fill="#facc15"/>
+<circle cx="753.5" cy="930" r="2" fill="#facc15"/>
+<circle cx="753.5" cy="937" r="2" fill="#facc15"/>
+<circle cx="763.0" cy="930" r="2" fill="#facc15"/>
+<circle cx="763.0" cy="937" r="2" fill="#facc15"/>
+<circle cx="772.5" cy="930" r="2" fill="#facc15"/>
+<circle cx="772.5" cy="937" r="2" fill="#facc15"/>
+<circle cx="782.0" cy="930" r="2" fill="#facc15"/>
+<circle cx="782.0" cy="937" r="2" fill="#facc15"/>
+<circle cx="791.5" cy="930" r="2" fill="#facc15"/>
+<circle cx="791.5" cy="937" r="2" fill="#facc15"/>
+<circle cx="801.0" cy="930" r="2" fill="#facc15"/>
+<circle cx="801.0" cy="937" r="2" fill="#facc15"/>
+<circle cx="810.5" cy="930" r="2" fill="#facc15"/>
+<circle cx="810.5" cy="937" r="2" fill="#facc15"/>
+<circle cx="820.0" cy="930" r="2" fill="#facc15"/>
+<circle cx="820.0" cy="937" r="2" fill="#facc15"/>
+<circle cx="829.5" cy="930" r="2" fill="#facc15"/>
+<circle cx="829.5" cy="937" r="2" fill="#facc15"/>
+<circle cx="839.0" cy="930" r="2" fill="#facc15"/>
+<circle cx="839.0" cy="937" r="2" fill="#facc15"/>
+<circle cx="848.5" cy="930" r="2" fill="#facc15"/>
+<circle cx="848.5" cy="937" r="2" fill="#facc15"/>
+<circle cx="858.0" cy="930" r="2" fill="#facc15"/>
+<circle cx="858.0" cy="937" r="2" fill="#facc15"/>
+<circle cx="867.5" cy="930" r="2" fill="#facc15"/>
+<circle cx="867.5" cy="937" r="2" fill="#facc15"/>
+<circle cx="877.0" cy="930" r="2" fill="#facc15"/>
+<circle cx="877.0" cy="937" r="2" fill="#facc15"/>
+<circle cx="886.5" cy="930" r="2" fill="#facc15"/>
+<circle cx="886.5" cy="937" r="2" fill="#facc15"/>
+<path d="M 702 956 L 706 943" stroke="#b45309" stroke-width="1.6" fill="none"/>
+<text x="696" y="968" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="10.5" fill="#b45309" text-anchor="start" font-weight="700">pin 1/2 bu uçta</text>
+<rect x="1098" y="946" width="22" height="24" rx="2" fill="#9ca3af"/>
+<rect x="1098" y="976" width="22" height="24" rx="2" fill="#9ca3af"/>
+<text x="1090" y="962" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="9.5" fill="#374151" text-anchor="end" font-weight="400">USB</text>
+<text x="1090" y="992" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="9.5" fill="#374151" text-anchor="end" font-weight="400">LAN</text>
+<rect x="666" y="986" width="26" height="11" rx="2" fill="#9ca3af"/>
+<text x="666" y="982" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="9.5" fill="#374151" text-anchor="start" font-weight="400">microSD</text>
+<text x="656" y="1038" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="start" font-weight="400">GPIO header üst kenarda, USB/Ethernet sağda.</text>
+<text x="656" y="1056" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="start" font-weight="400">Çift pinler (2,4,…) kart kenarındaki sıra.</text>
+<rect x="48" y="1100" width="540" height="332" rx="10" fill="#ffffff" stroke="#d4d4d8" stroke-width="1"/>
+<rect x="48" y="1100" width="540" height="6" rx="3" fill="#b45309"/>
+<text x="70" y="1138" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="18" fill="#111827" text-anchor="start" font-weight="700">PCM5102A</text>
+<text x="70" y="1160" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12.5" fill="#6b7280" text-anchor="start" font-weight="400">I2S DAC — bağlanacağı Pi pinleri</text>
+<rect x="70" y="1178" width="118" height="196" rx="8" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/>
+<text x="84" y="1207" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#111827" text-anchor="start" font-weight="700">VIN</text>
+<circle cx="188" cy="1202" r="5" fill="#ffffff" stroke="#b45309" stroke-width="2"/>
+<path d="M 193 1202 L 282 1202" stroke="#b45309" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<rect x="288" y="1190" width="44" height="24" rx="5" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/>
+<text x="310" y="1207" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#b45309" text-anchor="middle" font-weight="700">4</text>
+<text x="346" y="1207" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="start" font-weight="400">5V</text>
+<text x="369.2" y="1207" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11" fill="#b91c1c" text-anchor="start" font-weight="700">⚠ ekran altı</text>
+<text x="84" y="1237" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#111827" text-anchor="start" font-weight="700">GND</text>
+<circle cx="188" cy="1232" r="5" fill="#ffffff" stroke="#b45309" stroke-width="2"/>
+<path d="M 193 1232 L 282 1232" stroke="#b45309" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<rect x="288" y="1220" width="44" height="24" rx="5" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/>
+<text x="310" y="1237" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#b45309" text-anchor="middle" font-weight="700">34</text>
+<text x="346" y="1237" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="start" font-weight="400">GND (serbest)</text>
+<text x="84" y="1267" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#111827" text-anchor="start" font-weight="700">BCK</text>
+<circle cx="188" cy="1262" r="5" fill="#ffffff" stroke="#b45309" stroke-width="2"/>
+<path d="M 193 1262 L 282 1262" stroke="#b45309" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<rect x="288" y="1250" width="44" height="24" rx="5" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/>
+<text x="310" y="1267" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#b45309" text-anchor="middle" font-weight="700">12</text>
+<text x="346" y="1267" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="start" font-weight="400">GPIO18</text>
+<text x="395.6" y="1267" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11" fill="#b91c1c" text-anchor="start" font-weight="700">⚠ ekran altı</text>
+<text x="84" y="1297" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#111827" text-anchor="start" font-weight="700">LCK</text>
+<circle cx="188" cy="1292" r="5" fill="#ffffff" stroke="#b45309" stroke-width="2"/>
+<path d="M 193 1292 L 282 1292" stroke="#b45309" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<rect x="288" y="1280" width="44" height="24" rx="5" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/>
+<text x="310" y="1297" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#b45309" text-anchor="middle" font-weight="700">35</text>
+<text x="346" y="1297" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="start" font-weight="400">GPIO19 (serbest)</text>
+<text x="84" y="1327" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#111827" text-anchor="start" font-weight="700">DIN</text>
+<circle cx="188" cy="1322" r="5" fill="#ffffff" stroke="#b45309" stroke-width="2"/>
+<path d="M 193 1322 L 282 1322" stroke="#b45309" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<rect x="288" y="1310" width="44" height="24" rx="5" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/>
+<text x="310" y="1327" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#b45309" text-anchor="middle" font-weight="700">40</text>
+<text x="346" y="1327" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="start" font-weight="400">GPIO21 (serbest)</text>
+<text x="84" y="1357" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#111827" text-anchor="start" font-weight="700">SCK</text>
+<circle cx="188" cy="1352" r="5" fill="#ffffff" stroke="#b45309" stroke-width="2"/>
+<path d="M 193 1352 L 282 1352" stroke="#b45309" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<text x="288" y="1357" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12" fill="#b45309" text-anchor="start" font-weight="700">modülün GND padine bağla</text>
+<text x="70" y="1408" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#6b7280" text-anchor="start" font-weight="400">Modül jumper'ları:   FLT = L    DEMP = L    XSMT = H    FMT = L</text>
+<rect x="612" y="1100" width="540" height="332" rx="10" fill="#ffffff" stroke="#d4d4d8" stroke-width="1"/>
+<rect x="612" y="1100" width="540" height="6" rx="3" fill="#0f766e"/>
+<text x="634" y="1138" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="18" fill="#111827" text-anchor="start" font-weight="700">EC11 encoder</text>
+<text x="634" y="1160" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12.5" fill="#6b7280" text-anchor="start" font-weight="400">Döner kontrol — hepsi serbest pin</text>
+<rect x="634" y="1178" width="118" height="136" rx="8" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.5"/>
+<text x="648" y="1207" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#111827" text-anchor="start" font-weight="700">CLK (A)</text>
+<circle cx="752" cy="1202" r="5" fill="#ffffff" stroke="#0f766e" stroke-width="2"/>
+<path d="M 757 1202 L 846 1202" stroke="#0f766e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<rect x="852" y="1190" width="44" height="24" rx="5" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.5"/>
+<text x="874" y="1207" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#0f766e" text-anchor="middle" font-weight="700">29</text>
+<text x="910" y="1207" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="start" font-weight="400">GPIO5</text>
+<text x="648" y="1237" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#111827" text-anchor="start" font-weight="700">DT  (B)</text>
+<circle cx="752" cy="1232" r="5" fill="#ffffff" stroke="#0f766e" stroke-width="2"/>
+<path d="M 757 1232 L 846 1232" stroke="#0f766e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<rect x="852" y="1220" width="44" height="24" rx="5" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.5"/>
+<text x="874" y="1237" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#0f766e" text-anchor="middle" font-weight="700">31</text>
+<text x="910" y="1237" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="start" font-weight="400">GPIO6</text>
+<text x="648" y="1267" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#111827" text-anchor="start" font-weight="700">SW</text>
+<circle cx="752" cy="1262" r="5" fill="#ffffff" stroke="#0f766e" stroke-width="2"/>
+<path d="M 757 1262 L 846 1262" stroke="#0f766e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<rect x="852" y="1250" width="44" height="24" rx="5" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.5"/>
+<text x="874" y="1267" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#0f766e" text-anchor="middle" font-weight="700">33</text>
+<text x="910" y="1267" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="start" font-weight="400">GPIO13</text>
+<text x="648" y="1297" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#111827" text-anchor="start" font-weight="700">GND (C)</text>
+<circle cx="752" cy="1292" r="5" fill="#ffffff" stroke="#0f766e" stroke-width="2"/>
+<path d="M 757 1292 L 846 1292" stroke="#0f766e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<rect x="852" y="1280" width="44" height="24" rx="5" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.5"/>
+<text x="874" y="1297" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#0f766e" text-anchor="middle" font-weight="700">39</text>
+<text x="910" y="1297" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="start" font-weight="400">GND</text>
+<text x="634" y="1408" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#6b7280" text-anchor="start" font-weight="400">KY-040 kartıysa + ucunu bağlama; Pi'nin dahili pull-up'ları yeterli.</text>
+<rect x="48" y="1464" width="1104" height="146" rx="10" fill="#fef2f2" stroke="#b91c1c" stroke-width="1.5"/>
+<text x="70" y="1498" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16" fill="#b91c1c" text-anchor="start" font-weight="700">⚠  Atlanırsa çalışmayan üç şey</text>
+<text x="70" y="1526" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#b91c1c" text-anchor="start" font-weight="700">SCK mutlaka GND'ye —</text>
+<text x="223.0" y="1526" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12.5" fill="#7f1d1d" text-anchor="start" font-weight="400">Pi master clock (MCLK) üretmez. SCK şaseye çekilmezse PCM5102A dahili PLL'ini devreye almaz: ya hiç ses gelmez ya cızırtı olur.</text>
+<text x="70" y="1554" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#b91c1c" text-anchor="start" font-weight="700">XSMT jumper'ı H konumunda —</text>
+<text x="275.5" y="1554" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12.5" fill="#7f1d1d" text-anchor="start" font-weight="400">L konumundaysa yonga kalıcı olarak sessizde kalır.</text>
+<text x="70" y="1582" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#b91c1c" text-anchor="start" font-weight="700">USB diski ayrı besle —</text>
+<text x="238.0" y="1582" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12.5" fill="#7f1d1d" text-anchor="start" font-weight="400">Pi 3'ün tüm USB portları toplam ~1.2 A verir; 2.5" disk kalkışta 0.9 A çeker. Beslemeli hub veya Y-kablo kullan, 5V/3A kaynak şart.</text>
+<rect x="48" y="1640" width="1104" height="122" rx="10" fill="#ffffff" stroke="#6d28d9" stroke-width="1.5"/>
+<text x="70" y="1672" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13.5" fill="#111827" text-anchor="start" font-weight="600">Ekran 26 pinlik: pin 1–26 kapanır, 27–40 açıkta kalır. DAC'ın yalnızca VIN (4) ve BCK (12) uçları altta kalıyor.</text>
+<text x="70" y="1706" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6d28d9" text-anchor="start" font-weight="700">Çözüm A  ·  2×20 stacking header:</text>
+<text x="310" y="1706" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12.5" fill="#6b7280" text-anchor="start" font-weight="400">ekranı ~11 mm yükseltir, 40 pinin tamamı altta erişilebilir kalır. Lehim gerekmez.</text>
+<text x="70" y="1734" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#6d28d9" text-anchor="start" font-weight="700">Çözüm B  ·  lehimle:</text>
+<text x="310" y="1734" font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12.5" fill="#6b7280" text-anchor="start" font-weight="400">pin 12'ye kartın altından kablo lehimle; VIN'i header'a hiç dokunmadan mevcut 5V besleme kablosundan ayır.</text>
+</svg>

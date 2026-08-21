@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# hddmusicplayer ana kurulum betiği (Raspberry Pi OS, Bullseye veya Bookworm).
+# hddmusicplayer ana kurulum betiği (Raspberry Pi OS: Bookworm veya Trixie).
 #
 #   sudo ./install/install.sh
 #

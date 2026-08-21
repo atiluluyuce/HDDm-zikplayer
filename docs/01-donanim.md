@@ -52,19 +52,29 @@ overlay'i bu yongayı tanır — ayrı sürücü gerekmez.
 
 ### Kablolama (Pi 3 40-pin header)
 
+![Kablolama şeması](wiring.svg)
+
 | PCM5102A ucu | Pi pin | Pi sinyali | Not |
 |---|---|---|---|
-| `VIN` / `VCC` | **Pin 4** | 5V | Modülün üstünde regülatör var; 3.3V (pin 1) de çalışır |
-| `GND` | **Pin 6** | GND | |
-| `BCK` | **Pin 12** | GPIO18 / PCM_CLK | Bit clock |
-| `LCK` / `LRCK` | **Pin 35** | GPIO19 / PCM_FS | Word/frame clock |
-| `DIN` | **Pin 40** | GPIO21 / PCM_DOUT | Ses verisi |
-| `SCK` | **Pin 9 veya 39** | GND | ⚠️ **Mutlaka GND'ye çekilecek** |
+| `VIN` / `VCC` | **Pin 4** | 5V | ⚠️ Ekranın altında kalıyor |
+| `GND` | **Pin 34** | GND | Serbest — ekran takılıyken de erişilebilir |
+| `BCK` | **Pin 12** | GPIO18 / PCM_CLK | Bit clock. ⚠️ Ekranın altında kalıyor |
+| `LCK` / `LRCK` | **Pin 35** | GPIO19 / PCM_FS | Word/frame clock. Serbest |
+| `DIN` | **Pin 40** | GPIO21 / PCM_DOUT | Ses verisi. Serbest |
+| `SCK` | — | GND | ⚠️ **Modülün kendi GND padine bağla** |
 
 > **`SCK` neden GND'ye gidiyor?** Raspberry Pi, I2S hattında master clock (MCLK) üretmez.
 > PCM5102A'nın `SCK` girişi şaseye çekilirse yonga kendi dahili PLL'ini devreye alıp
 > sistem saatini `BCK`'dan türetir. Bu bağlantı unutulursa DAC ya hiç ses vermez ya da
 > cızırtı üretir. En sık yapılan hata budur.
+
+> **Neden pin 6 değil de 34?** İkisi de GND, elektriksel fark yok. Ama pin 6
+> ekranın altında kalıyor, pin 34 açıkta. GND'yi 34'e alınca ekran takılıyken
+> ulaşılamayan uç sayısı üçten ikiye (VIN ve BCK) düşüyor.
+>
+> `SCK`'yı Pi'den ayrı bir GND pinine çekmek yerine modülün kendi `GND` padine
+> köprülemek hem bir jumper tasarrufu sağlıyor hem de en kısa yolu kullanıyor.
+> İstersen pin 9, 30 veya 39'a da çekebilirsin — hepsi aynı şaseye gider.
 
 ### Modül üzerindeki jumper'lar
 
@@ -169,7 +179,8 @@ DAC'ın ihtiyaç duyduğu pinlerin durumu:
 |---|---|---|
 | `LCK` | 35 | ✅ **Açıkta** |
 | `DIN` | 40 | ✅ **Açıkta** |
-| `GND` | 39 | ✅ **Açıkta** |
+| `GND` | 34 | ✅ **Açıkta** (pin 39 EC11 encoder'a ayrıldı) |
+| `SCK` | — | ✅ Modülün kendi GND padine köprüleniyor |
 | `BCK` | 12 | ❌ Ekranın altında kalıyor (ekranda **NC**, yani boşta duruyor) |
 | `VIN` | 2 / 4 (5V) | ❌ Ekranın altında kalıyor |
 
@@ -185,12 +196,12 @@ Ayrıca ekranın altında DAC'a yer açar.
 
 Kartta zaten GPIO'ya lehimlenmiş besleme kabloları var, aynı yöntem:
 
-1. `LCK`, `DIN`, `GND` → **pin 35, 40, 39**'a normal jumper ile (açıkta, sorun yok).
+1. `LCK`, `DIN`, `GND` → **pin 35, 40, 34**'e normal jumper ile (açıkta, sorun yok).
 2. `BCK` → Pi'nin **altından pin 12'nin lehim adasına** ince bir kablo lehimle.
 3. `VIN` → header'a hiç dokunma; hâlihazırda lehimli **5V besleme kablosunun** üzerinden
    ayır. Zaten aynı rayı besliyor.
 
-Her iki durumda da `SCK` ucunu GND'ye çekmeyi unutma.
+Her iki durumda da `SCK` ucunu modülün `GND` padine köprülemeyi unutma.
 
 > **Ses kalitesi notu:** SPI ekran ve I2S ses aynı anda çalışır, birbirini etkilemez —
 > ayrı çevre birimleri, ayrı DMA kanalları. Ekran yenilenirken sesin kesilmesi gibi bir
@@ -198,10 +209,33 @@ Her iki durumda da `SCK` ucunu GND'ye çekmeyi unutma.
 
 ---
 
+## EC11 döner encoder
+
+Rezistif dokunmatik isabetsiz kaldığında fiziksel kontrol devreye girer: çevirince ses,
+listelerde seçim; basınca çal/duraklat; uzun basınca geri.
+
+| EC11 ucu | Pi fiziksel pin | BCM | Durum |
+|---|---|---|---|
+| `CLK` (A) | 29 | GPIO5 | ✅ Açıkta |
+| `DT` (B) | 31 | GPIO6 | ✅ Açıkta |
+| `SW` (buton) | 33 | GPIO13 | ✅ Açıkta |
+| `GND` (C) | 39 | — | ✅ Açıkta |
+
+Pinler bilinçli olarak **27-40 aralığından** seçildi: ekran 26 pinlik olduğu için bu
+bölge açıkta kalıyor, yani encoder ekran takılıyken de lehim gerektirmeden bağlanabilir.
+
+KY-040 tarzı bir breakout kartı kullanıyorsan `+` ucunu bağlamana gerek yok — Pi'nin
+dahili pull-up dirençleri `gpiozero` tarafından devreye alınıyor.
+
+Saat yönü sesi kısıyorsa `HDDMUSICPLAYER_ENCODER_REVERSED=1` yap. Encoder hiç yoksa
+`HDDMUSICPLAYER_ENCODER_ENABLED=0`; panel dokunmatikle çalışmaya devam eder.
+
+---
+
 ## Kernel / boot ayarları özeti
 
 `install/setup-dac.sh` ve `install/setup-display.sh` bunları otomatik yazar
-(Bookworm'da `/boot/firmware/config.txt`, öncesinde `/boot/config.txt`):
+(Bookworm ve sonrasında `/boot/firmware/config.txt`, öncesinde `/boot/config.txt`):
 
 ```ini
 # --- PCM5102A I2S DAC ---

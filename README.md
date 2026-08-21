@@ -34,8 +34,13 @@ ekrandan veya telefondan erişip dinlemek için.
 | Depolama | 500 GB USB 2.5" HDD |
 
 Elde bir Raspberry Pi 1 Model B de vardı; tek çekirdekli ARM11'i bu iş için
-yetersiz kaldığı için elendi. Gerekçeler, kablolama şemaları ve ekran/DAC
-fiziksel çakışmasının çözümü: **[docs/01-donanim.md](docs/01-donanim.md)**
+yetersiz kaldığı için elendi.
+
+**📐 [Kablolama şeması — docs/wiring.svg](docs/wiring.svg)** · pin pin ne nereye
+gidiyor, hangi pinler ekranın altında kalıyor, atlanırsa çalışmayan üç şey.
+
+Gerekçeler ve ekran/DAC fiziksel çakışmasının çözümü:
+**[docs/01-donanim.md](docs/01-donanim.md)**
 
 > **İki kritik nokta:** PCM5102A'nın `SCK` ucu GND'ye çekilmezse ses gelmez.
 > USB diski beslemeli hub veya Y-kabloyla besle — Pi 3'ün USB portları toplam
@@ -43,7 +48,7 @@ fiziksel çakışmasının çözümü: **[docs/01-donanim.md](docs/01-donanim.md
 
 ## Kurulum
 
-Raspberry Pi OS (Bullseye veya Bookworm, Lite yeterli) kurulu bir kartta:
+Raspberry Pi OS Lite (Bookworm veya Trixie) kurulu bir kartta:
 
 ```bash
 git clone https://github.com/atiluluyuce/HDDm-zikplayer.git
