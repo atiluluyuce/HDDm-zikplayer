@@ -102,11 +102,20 @@ else
     mixer_control   "SoftMaster"'
 fi
 
+# sed'in `s` komutu değişim metninde ham satır sonu kabul etmez; çok satırlı
+# mikser bloğunu önce \n kaçışlarına çeviriyoruz (GNU sed bunu satır sonu olarak
+# geri yorumluyor). Doğrudan verilince "unterminated `s' command" hatası veriyordu.
+MPD_MIXER_SED=${MPD_MIXER//$'\n'/\\n}
+
+# Geçici dosyaya yaz, başarılı olursa yerine koy: sed hata verirse /etc/mpd.conf
+# yönlendirme yüzünden boş kalmasın.
+MPD_CONF_TMP=$(mktemp)
 sed -e "s|@MUSIC_ROOT@|$MUSIC_ROOT|g" \
     -e "s|@MPD_DEVICE@|$MPD_DEVICE|g" \
-    -e "s|@MPD_MIXER@|$MPD_MIXER|g" \
-    "$CONFIG_DIR/mpd.conf" > /etc/mpd.conf
-chmod 0644 /etc/mpd.conf
+    -e "s|@MPD_MIXER@|$MPD_MIXER_SED|g" \
+    "$CONFIG_DIR/mpd.conf" > "$MPD_CONF_TMP"
+install -m 0644 "$MPD_CONF_TMP" /etc/mpd.conf
+rm -f "$MPD_CONF_TMP"
 
 install -m 0644 "$CONFIG_DIR/asound.conf" /etc/asound.conf
 install -m 0440 "$CONFIG_DIR/hddmusicplayer-sudoers" /etc/sudoers.d/hddmusicplayer
