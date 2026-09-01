@@ -329,7 +329,10 @@ def stats() -> dict[str, Any]:
     row = db.query_one("""
         SELECT (SELECT COUNT(*) FROM tracks)  AS tracks,
                (SELECT COUNT(*) FROM albums)  AS albums,
-               (SELECT COUNT(*) FROM artists WHERE track_count > 0) AS artists,
+               -- artists.track_count taramanın sonunda toplu hesaplanıyor; tarama
+               -- sürerken hepsi 0 olduğu için sayaç 0 görünüyordu. Doğrudan
+               -- parçalardan sayıyoruz: tracks_artist indeksi var, maliyeti düşük.
+               (SELECT COUNT(DISTINCT artist_id) FROM tracks WHERE artist_id IS NOT NULL) AS artists,
                (SELECT IFNULL(SUM(duration), 0) FROM tracks) AS duration,
                (SELECT IFNULL(SUM(size), 0) FROM tracks)     AS bytes,
                (SELECT COUNT(*) FROM plays)   AS plays,
