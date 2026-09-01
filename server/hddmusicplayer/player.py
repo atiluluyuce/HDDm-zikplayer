@@ -42,12 +42,16 @@ class Player:
         self._last_duration: float = 0.0
         self._play_source: str = "queue"
 
-        self._autoqueue = (db.get_pref("autoqueue", "1") == "1")
+        # Gerçek değer start() içinde okunuyor: __init__ modül import edilirken
+        # çalışıyor ve o an db.init_db() henüz koşmadığı için tablolar yok.
+        self._autoqueue = True
         self._autoqueue_busy = False
 
     # --- Yaşam döngüsü -------------------------------------------------------
 
     async def start(self) -> None:
+        # Şema init_db() ile kurulduktan sonra tercihleri oku.
+        self._autoqueue = (db.get_pref("autoqueue", "1") == "1")
         self.watcher.start()
         self._ticker = asyncio.create_task(self._tick_loop(), name="player-tick")
         with contextlib.suppress(mpd.MPDError):
