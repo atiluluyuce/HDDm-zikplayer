@@ -22,6 +22,9 @@ REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 CONFIG_DIR="$REPO_DIR/install/config"
 SERVICE_USER="hddmusicplayer"
 VENV_DIR="/opt/hddmusicplayer/venv"
+# Uygulama kodu ev dizininden DEĞİL buradan çalışır: servis ayrı bir sistem
+# kullanıcısı olarak koştuğu için /home/<kullanıcı> altına giremiyor (0750).
+APP_DIR="/opt/hddmusicplayer/app"
 DATA_DIR="/var/lib/hddmusicplayer"
 ETC_DIR="/etc/hddmusicplayer"
 MUSIC_ROOT="${MUSIC_ROOT:-/media/music}"
@@ -58,7 +61,21 @@ done
 log "Dizinler hazırlanıyor"
 install -d -o "$SERVICE_USER" -g "$SERVICE_USER" -m 0755 "$DATA_DIR" "$DATA_DIR/art"
 install -d -m 0755 "$ETC_DIR" "$MUSIC_ROOT"
-install -d -m 0755 /opt/hddmusicplayer
+install -d -m 0755 /opt/hddmusicplayer "$APP_DIR"
+
+# MPD kendi durum dosyalarını burada tutar; paket bazen oluşturmuyor.
+install -d -o mpd -g audio -m 0755 /var/lib/mpd /var/lib/mpd/playlists 2>/dev/null || true
+
+# --- Uygulama kodu -----------------------------------------------------------
+# Depo kullanıcının ev dizininde duruyor ama servis oradan çalışamaz. Kodu
+# /opt altına kopyalıyoruz; güncelleme için git pull sonrası install.sh yeniden
+# çalıştırılır.
+log "Uygulama $APP_DIR altına kuruluyor"
+rm -rf "$APP_DIR/server" "$APP_DIR/ui"
+cp -a "$REPO_DIR/server" "$REPO_DIR/ui" "$APP_DIR/"
+chown -R root:root "$APP_DIR"
+find "$APP_DIR" -type d -exec chmod 0755 {} +
+find "$APP_DIR" -type f -exec chmod 0644 {} +
 
 # --- Python ortamı -----------------------------------------------------------
 # --system-site-packages: PIL, numpy, mutagen, evdev, gpiozero apt'ten gelir.
@@ -70,7 +87,7 @@ if [[ ! -x "$VENV_DIR/bin/python" ]]; then
   python3 -m venv --system-site-packages "$VENV_DIR"
 fi
 "$VENV_DIR/bin/pip" install --quiet --upgrade pip
-"$VENV_DIR/bin/pip" install --quiet -r "$REPO_DIR/server/requirements.txt"
+"$VENV_DIR/bin/pip" install --quiet -r "$APP_DIR/server/requirements.txt"
 
 # --- Yapılandırma ------------------------------------------------------------
 
@@ -125,7 +142,7 @@ visudo -cf /etc/sudoers.d/hddmusicplayer >/dev/null
 
 log "Servisler kuruluyor"
 for unit in hddmusicplayer-api hddmusicplayer-panel; do
-  sed -e "s|@REPO_DIR@|$REPO_DIR|g" \
+  sed -e "s|@APP_DIR@|$APP_DIR|g" \
       -e "s|@VENV_DIR@|$VENV_DIR|g" \
       -e "s|@USER@|$SERVICE_USER|g" \
       "$CONFIG_DIR/$unit.service" > "/etc/systemd/system/$unit.service"

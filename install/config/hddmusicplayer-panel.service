@@ -10,7 +10,7 @@ User=@USER@
 Group=@USER@
 # Framebuffer, dokunmatik ve GPIO erişimi için ek gruplar.
 SupplementaryGroups=video input gpio audio
-WorkingDirectory=@REPO_DIR@/server
+WorkingDirectory=@APP_DIR@/server
 EnvironmentFile=/etc/hddmusicplayer/hddmusicplayer.env
 Environment=PYTHONUNBUFFERED=1
 Environment=HDDMUSICPLAYER_API_URL=http://127.0.0.1:8080

@@ -9,7 +9,7 @@ Requires=mpd.service
 Type=simple
 User=@USER@
 Group=@USER@
-WorkingDirectory=@REPO_DIR@/server
+WorkingDirectory=@APP_DIR@/server
 EnvironmentFile=/etc/hddmusicplayer/hddmusicplayer.env
 Environment=PYTHONUNBUFFERED=1
 ExecStart=@VENV_DIR@/bin/python -m hddmusicplayer

@@ -10,6 +10,7 @@ set -euo pipefail
 
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 VENV_DIR="/opt/hddmusicplayer/venv"
+APP_DIR="/opt/hddmusicplayer/app"
 
 warn() { printf '\033[1;31m!!\033[0m %s\n' "$*" >&2; }
 
@@ -24,7 +25,8 @@ if systemctl is-active --quiet hddmusicplayer-panel; then
 fi
 
 set +e
-cd "$REPO_DIR/server"
+# Kurulu sürümü kullan; depo ile /opt farklıysa çalışan kod /opt'takidir.
+cd "${APP_DIR}/server" 2>/dev/null || cd "$REPO_DIR/server"
 env $(grep -v '^#' /etc/hddmusicplayer/hddmusicplayer.env | grep -v '^$' | xargs) \
   "$VENV_DIR/bin/python" -m hddmusicplayer.panel.calibrate
 STATUS=$?

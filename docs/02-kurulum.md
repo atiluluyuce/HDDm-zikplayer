@@ -34,6 +34,7 @@ Kurulum betiği şunları yapar:
 |---|---|
 | Paketler | `mpd`, `alsa-utils`, `python3-pil`, `python3-numpy`, `python3-mutagen`, `python3-evdev`, `python3-gpiozero`, `python3-lgpio` |
 | Kullanıcı | `hddmusicplayer` sistem kullanıcısı; `audio`, `video`, `input`, `gpio` gruplarında |
+| Uygulama | `/opt/hddmusicplayer/app` — kod buraya kopyalanır, servisler buradan çalışır |
 | Sanal ortam | `/opt/hddmusicplayer/venv` — `--system-site-packages` ile, içine sadece `starlette` + `uvicorn` |
 | Yapılandırma | `/etc/hddmusicplayer/hddmusicplayer.env`, `/etc/mpd.conf`, `/etc/asound.conf` |
 | Servisler | `hddmusicplayer-api`, `hddmusicplayer-panel` |
@@ -220,6 +221,15 @@ curl -s localhost:8080/healthz        # "ok" dönmeli
 
 `mpd yok` dönüyorsa MPD ayakta değil: `systemctl status mpd`.
 
+### Servis sürekli yeniden başlıyor (CHDIR hatası)
+
+```
+Failed at step CHDIR spawning /opt/hddmusicplayer/venv/bin/python: Permission denied
+```
+
+Servisin çalışma dizini erişilemiyor demektir. `sudo ./install/install.sh`
+çalıştır — kodu `/opt/hddmusicplayer/app` altına kurup birimleri düzeltir.
+
 ### Panel açılmıyor
 
 ```bash
@@ -237,11 +247,19 @@ journalctl -u hddmusicplayer-panel -n 50 --no-pager
 ```bash
 cd HDDm-zikplayer
 git pull
-sudo systemctl restart hddmusicplayer-api hddmusicplayer-panel
+sudo ./install/install.sh
 ```
 
-Bağımlılıklar veya servis tanımları değiştiyse `sudo ./install/install.sh`
-tekrar çalıştırılabilir — mevcut `hddmusicplayer.env` dosyasına dokunmaz.
+**`install.sh`'ı atlama.** Uygulama kodu depodan değil `/opt/hddmusicplayer/app`
+altından çalışıyor; `git pull` yalnızca depoyu günceller, kurulum betiği kodu
+/opt'a kopyalar ve servisleri yeniden başlatır.
+
+> Kod neden /opt'ta? Servis `hddmusicplayer` sistem kullanıcısı olarak koşuyor ve
+> Raspberry Pi OS ev dizinlerini `0750` ile oluşturduğu için o kullanıcı
+> `/home/<adin>` içine giremiyor. Servis ev dizininden çalıştırılınca systemd
+> `Failed at step CHDIR ... Permission denied` verip sürekli yeniden başlıyor.
+
+Betik mevcut `hddmusicplayer.env` dosyasına dokunmaz, ayarların korunur.
 
 ## Kaldırma
 
