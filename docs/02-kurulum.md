@@ -65,6 +65,7 @@ Diski hangi biçimde tutmalı:
 | **ext4** | En iyi. Yerli destek, en düşük CPU. Diski biçimlendirebiliyorsan bunu seç |
 | **exFAT** | İyi. Windows/Mac ile de okunur |
 | **NTFS** | Çalışır. FUSE üzerinden, CPU maliyeti var ama MP3 akışı için sorun değil |
+| **FAT32 (vfat)** | Çalışır. Tek dosya 4 GB'ı geçemez; betik `iocharset=utf8` ile bağlar, yoksa Türkçe dosya adları bozulur |
 
 > NTFS'te Pi 3'ün bir çekirdeği `ntfs-3g` ile meşgul olur. Tek dosya çalarken
 > fark etmez; ilk tarama biraz uzar.

@@ -61,7 +61,10 @@ case "$FSTYPE" in
     OPTIONS="defaults,noatime,nofail,x-systemd.device-timeout=15,uid=0,gid=audio,umask=0022"
     ;;
   vfat)
-    OPTIONS="defaults,noatime,nofail,x-systemd.device-timeout=15,uid=0,gid=audio,umask=0022"
+    # iocharset=utf8: FAT32 dosya adlarını UTF-16'dan çevirirken çekirdeğin
+    # varsayılanı UTF-8 olmayabiliyor; o zaman "Şarkı" gibi adlar bozuk gelir ve
+    # hem tarama hem MPD dosyayı açamaz. Açıkça belirtiyoruz.
+    OPTIONS="defaults,noatime,nofail,x-systemd.device-timeout=15,uid=0,gid=audio,umask=0022,iocharset=utf8"
     warn "FAT32 dosya sistemi: 4 GB üstü dosya desteklenmez, uzun yollarda sorun çıkabilir."
     ;;
   hfsplus)
