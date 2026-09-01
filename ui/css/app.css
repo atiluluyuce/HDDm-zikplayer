@@ -20,6 +20,12 @@
 
 * { box-sizing: border-box; }
 
+/* [hidden] özniteliği tarayıcının varsayılan stilinden gelir; aşağıdaki .player
+   ve .sheet kuralları display tanımladığı için yazar stili onu eziyor ve gizli
+   olması gereken katmanlar açık kalıyordu. Bu satır olmadan .sheet tüm sayfayı
+   yarı saydam bir örtüyle kaplıyor. */
+[hidden] { display: none !important; }
+
 html, body {
   margin: 0;
   padding: 0;
